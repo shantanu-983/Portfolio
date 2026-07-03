@@ -1,0 +1,113 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0f1c; /* navy-900 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2937; /* navy-700 */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+    background: rgba(10, 15, 28, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+    background: rgba(31, 41, 55, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtle Glow Text */
+.text-glow {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+/* Ensure no horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+
+/* Animation for glowing borders on hover */
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Profile Photo Ring */
+.profile-ring {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+    padding: 4px;
+    border-radius: 9999px;
+}
+
+.profile-ring-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 9999px;
+    overflow: hidden;
+    border: 3px solid #0a0f1c;
+}
+
+.profile-ring-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.profile-ring:hover .profile-ring-inner img {
+    transform: scale(1.05);
+}
+
+/* Spinning outer ring */
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.profile-spin-ring {
+    animation: spin-slow 8s linear infinite;
+}
+
+/* Stats card glassmorphism */
+.stat-card {
+    background: rgba(31, 41, 55, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+}
+
+/* Form input focus */
+.form-input:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
